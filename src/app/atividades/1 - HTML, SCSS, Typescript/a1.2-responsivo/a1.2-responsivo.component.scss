@@ -1,0 +1,42 @@
+/* Responsivo com Flexbox */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid blue;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+/* Responsivo com Grid */
+@media (min-width: 1001px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para telas maiores que 1000px */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna para telas menores ou iguais a 1000px */
+    gap: 20px;
+  }
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
